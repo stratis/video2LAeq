@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.mov
+*.pdf
+*.csv
+debug/
+.pytest_cache/

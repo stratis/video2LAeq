@@ -1,0 +1,30 @@
+[project]
+name = "video2laeq"
+version = "0.1.0"
+description = "Υπολογισμός LAeq / LAF10 / LAF90 από βίντεο ηχομέτρου"
+readme = "README.md"
+authors = [
+    { name = "stratis", email = "stratis@karmahorizons.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "opencv-python-headless>=5.0.0.93",
+    "reportlab>=5.0.1",
+]
+
+[project.scripts]
+video2laeq = "video2laeq.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.4,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["tests"]
